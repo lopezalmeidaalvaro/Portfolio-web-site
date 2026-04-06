@@ -45,10 +45,15 @@ export default function Projects({ t }: ProjectsProps) {
             <p className="text-gray-400 text-lg leading-relaxed max-w-xl">{t.germalearn.description}</p>
           </div>
           <div>
-            <button className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-white text-gray-950 font-semibold text-sm hover:bg-gray-100 transition-colors">
+            <a 
+              href="https://germalearn-app.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white text-gray-950 font-semibold text-sm hover:bg-gray-100 transition-colors"
+            >
               <ExternalLink className="w-4 h-4" />
               {t.germalearn.action}
-            </button>
+            </a>
           </div>
         </motion.div>
 
@@ -75,9 +80,14 @@ export default function Projects({ t }: ProjectsProps) {
             <p className="text-gray-400 leading-relaxed">{t.reflex.description}</p>
           </div>
           <div>
-            <button className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-indigo-500 text-white font-semibold text-sm hover:bg-indigo-600 transition-colors">
+            <a 
+              href="https://app-reflex-game.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-indigo-500 text-white font-semibold text-sm hover:bg-indigo-600 transition-colors"
+            >
               {t.reflex.action}
-            </button>
+            </a>
           </div>
         </motion.div>
 
@@ -101,10 +111,15 @@ export default function Projects({ t }: ProjectsProps) {
             <p className="text-gray-400 leading-relaxed">{t.weather.description}</p>
           </div>
           <div>
-            <button className="flex items-center gap-2 px-5 py-2.5 rounded-full border border-gray-700 bg-gray-950 text-white font-semibold text-sm hover:bg-gray-800 hover:border-gray-500 transition-colors">
+            <a 
+              href="https://github.com/lopezalmeidaalvaro/datadriven-weather-demand"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-gray-700 bg-gray-950 text-white font-semibold text-sm hover:bg-gray-800 hover:border-gray-500 transition-colors"
+            >
               <GithubIcon className="w-4 h-4" />
               {t.weather.action}
-            </button>
+            </a>
           </div>
         </motion.div>
 
