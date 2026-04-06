@@ -6,6 +6,7 @@ type HeroProps = {
     headline: string;
     tagline: string;
     bio: string;
+    credibilityBar: string;
     ctaPrimary: string;
     ctaSecondary: string;
   };
@@ -28,7 +29,7 @@ export default function Hero({ t }: HeroProps) {
           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
           <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
         </span>
-        Available for new opportunities
+        Open to freelance & remote roles
       </motion.div>
 
       <motion.h1 
@@ -78,6 +79,15 @@ export default function Hero({ t }: HeroProps) {
           <Mail className="w-4 h-4 text-emerald-400" />
           {t.ctaSecondary}
         </a>
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.6 }}
+        className="mt-10 text-sm text-gray-600 tracking-wide font-medium"
+      >
+        {t.credibilityBar}
       </motion.div>
     </section>
   );

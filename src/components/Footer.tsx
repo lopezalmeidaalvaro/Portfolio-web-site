@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 type FooterProps = {
   t: {
     cta: string;
+    responseTime: string;
   };
 };
 
@@ -27,6 +28,9 @@ export default function Footer({ t }: FooterProps) {
               lopezalmeidaalvaro@gmail.com
               <ArrowUpRight className="w-4 h-4" />
             </a>
+            <p className="mt-2 text-xs text-gray-600">
+              {t.responseTime}
+            </p>
           </motion.div>
 
           <div className="flex items-center gap-6">
