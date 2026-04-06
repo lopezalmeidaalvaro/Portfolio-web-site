@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, sans-serif;
+  
+  --color-brand-emerald: var(--color-emerald-400);
+  --color-brand-indigo: var(--color-indigo-500);
+}
+
+@layer base {
+  body {
+    @apply bg-gray-950 text-gray-100 antialiased selection:bg-indigo-500/30 selection:text-indigo-200;
+  }
+}
