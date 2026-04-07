@@ -22,7 +22,7 @@ export const translations = {
       },
       germalearn: {
         title: "Germalearn (The Brain)",
-        description: "AI learning platform with a custom SM-2 spaced repetition algorithm and dynamic exercise generation via Gemini Flash API. Built with React 19, TypeScript and Tailwind v4. Deployed on Vercel with full CI/CD pipeline.",
+        description: "German learning app built around a custom SM-2 spaced repetition engine and real-time exercise generation via Gemini Flash API. Designed to maximize retention through adaptive difficulty — the algorithm adjusts card intervals based on individual performance, not fixed schedules.",
         tags: ["AI Integration", "React", "Tailwind"],
         action: "Live App"
       },
@@ -59,7 +59,7 @@ export const translations = {
       },
       germalearn: {
         title: "Germalearn (El Cerebro)",
-        description: "Plataforma de aprendizaje con IA que implementa un algoritmo de repetición espaciada SM-2 personalizado y generación dinámica de ejercicios mediante Gemini Flash API. Construida con React 19, TypeScript y Tailwind v4. Desplegada en Vercel con pipeline CI/CD.",
+        description: "App para aprender alemán construida sobre un motor de repetición espaciada SM-2 personalizado y generación de ejercicios en tiempo real mediante Gemini Flash API. Diseñada para maximizar la retención mediante dificultad adaptativa — el algoritmo ajusta los intervalos de cada tarjeta según el rendimiento individual, no calendarios fijos.",
         tags: ["AI Integration", "React", "Tailwind"],
         action: "Ver App en Vivo"
       },
