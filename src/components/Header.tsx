@@ -9,22 +9,34 @@ type HeaderProps = {
 };
 
 export default function Header({ lang, toggleLanguage, t }: HeaderProps) {
+  const scrollToProjects = () => {
+    document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
-    <motion.header 
+    <motion.header
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
       className="flex items-center justify-between py-6 mt-4"
     >
       <div className="flex items-center">
-        <span className="text-xl font-bold tracking-tight text-white">
-          Álvaro.dev
+        <span className="text-xl tracking-tight">
+          <span className="font-bold text-white">Álvaro</span>
+          <span className="font-bold text-emerald-400">.</span>
+          <span className="font-light text-gray-400">dev</span>
         </span>
-        <div className="w-2 h-2 rounded-full bg-emerald-400 ml-1.5 mt-2 animate-pulse" />
       </div>
 
       <div className="flex items-center gap-6">
-        <button 
+        <button
+          onClick={scrollToProjects}
+          className="text-sm font-medium text-gray-400 hover:text-white transition-colors hidden sm:block"
+        >
+          Work
+        </button>
+
+        <button
           onClick={toggleLanguage}
           className="flex items-center gap-2 px-3 py-1.5 rounded-full border border-gray-800 bg-gray-900/50 hover:bg-gray-800/80 transition-colors text-sm font-medium text-gray-300 hover:text-white"
         >
@@ -32,9 +44,9 @@ export default function Header({ lang, toggleLanguage, t }: HeaderProps) {
           <span>{lang === 'en' ? 'ES' : 'EN'}</span>
         </button>
 
-        <a 
-          href="https://github.com/lopezalmeidaalvaro" 
-          target="_blank" 
+        <a
+          href="https://github.com/lopezalmeidaalvaro"
+          target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-2 text-sm font-medium text-gray-400 hover:text-white transition-colors"
         >
