@@ -16,8 +16,8 @@ type HeroProps = {
 };
 
 export default function Hero({ t }: HeroProps) {
-  const scrollToProjects = () => {
-    document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+  const scrollToServices = () => {
+    document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   // Split headline into lines for per-line color treatment
@@ -68,7 +68,7 @@ export default function Hero({ t }: HeroProps) {
         className="flex flex-wrap items-center gap-6 mb-12"
       >
         <button
-          onClick={scrollToProjects}
+          onClick={scrollToServices}
           className="group flex items-center gap-2 px-6 py-3 rounded-full bg-white text-gray-950 font-semibold hover:bg-gray-100 transition-all focus:ring-2 focus:ring-white/50 focus:outline-none"
         >
           {t.ctaPrimary}
