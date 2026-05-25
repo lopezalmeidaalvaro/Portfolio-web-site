@@ -27,7 +27,7 @@ export default function TechStack() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5, delay: 0.7 }}
-      className="py-12 border-y border-gray-900/50"
+      className="py-12 border-y border-gray-200 dark:border-gray-900/50"
     >
       <div className="flex flex-wrap items-center gap-4">
         {technologies.map((tech, index) => {
@@ -35,9 +35,9 @@ export default function TechStack() {
           return (
             <div 
               key={index} 
-              className="group flex items-center gap-2 px-4 py-2 rounded-full bg-gray-900 border border-gray-800 text-gray-300 hover:bg-gray-800 hover:text-white transition-all cursor-default"
+              className="group flex items-center gap-2 px-4 py-2 rounded-full bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-950 dark:hover:text-white transition-all cursor-default"
             >
-              <Icon className={`w-4 h-4 text-gray-500 transition-colors ${tech.hoverColorClass}`} />
+              <Icon className={`w-4 h-4 text-gray-400 dark:text-gray-500 transition-colors ${tech.hoverColorClass}`} />
               <span className="text-sm font-semibold tracking-wide">
                 {tech.name}
               </span>

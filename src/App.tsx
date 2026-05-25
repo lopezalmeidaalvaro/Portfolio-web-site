@@ -10,6 +10,7 @@ import Services from './components/Services';
 import Projects from './components/Projects';
 import CaseStudyWeather from './components/CaseStudyWeather';
 import Footer from './components/Footer';
+import { ThemeProvider } from './hooks/useTheme';
 
 function AppContent() {
   const [lang, setLang] = useState<Language>('en');
@@ -27,13 +28,15 @@ function AppContent() {
   };
 
   const handleCloseCaseStudy = () => {
-    window.scrollTo({ top: 0 });
     setShowCaseStudy(false);
+    setTimeout(() => {
+      document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+    }, 50);
   };
 
   if (showCaseStudy) {
     return (
-      <div className="min-h-screen bg-gray-950 font-sans selection:bg-indigo-500/30 selection:text-indigo-200">
+      <div className="min-h-screen bg-gray-50 dark:bg-gray-950 text-gray-950 dark:text-gray-100 font-sans selection:bg-indigo-500/30 selection:text-indigo-200">
         <div className="container mx-auto px-4 md:px-8 max-w-6xl">
           <Header lang={lang} toggleLanguage={toggleLanguage} t={t.header} />
           <main className="pb-24">
@@ -46,7 +49,7 @@ function AppContent() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-950 font-sans selection:bg-indigo-500/30 selection:text-indigo-200">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-950 text-gray-950 dark:text-gray-100 font-sans selection:bg-indigo-500/30 selection:text-indigo-200">
       <div className="container mx-auto px-4 md:px-8 max-w-6xl">
         <Header lang={lang} toggleLanguage={toggleLanguage} t={t.header} />
         <Routes>
@@ -69,17 +72,17 @@ function AppContent() {
                 <Link
                   to="/"
                   onClick={() => window.scrollTo({ top: 0 })}
-                  className="group inline-flex items-center gap-2 text-gray-400 hover:text-white font-medium mb-10 transition-colors select-none"
+                  className="group inline-flex items-center gap-2 text-gray-500 dark:text-gray-400 hover:text-gray-950 dark:hover:text-white font-medium mb-10 transition-colors select-none"
                 >
                   <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
                   {lang === 'es' ? "Volver al portfolio" : "Back to portfolio"}
                 </Link>
                 
                 {/* Titles */}
-                <h1 className="text-3xl md:text-5xl font-black text-white tracking-tight mb-4 leading-tight">
+                <h1 className="text-3xl md:text-5xl font-black text-gray-950 dark:text-white tracking-tight mb-4 leading-tight">
                   Research & Side Projects
                 </h1>
-                <p className="text-lg text-gray-400 leading-relaxed font-normal max-w-2xl mb-12">
+                <p className="text-lg text-gray-500 dark:text-gray-400 leading-relaxed font-normal max-w-2xl mb-12">
                   {lang === 'es'
                     ? "Proyectos de exploración técnica, investigación aplicada y experimentos fuera del stack principal."
                     : "Technical exploration, applied research, and experiments outside the main stack."}
@@ -99,9 +102,11 @@ function AppContent() {
 
 function App() {
   return (
-    <Router>
-      <AppContent />
-    </Router>
+    <ThemeProvider>
+      <Router>
+        <AppContent />
+      </Router>
+    </ThemeProvider>
   );
 }
 
