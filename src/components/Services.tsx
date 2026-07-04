@@ -1,4 +1,4 @@
-import { Database, Workflow, FileBarChart, ArrowRight } from 'lucide-react';
+import { Code2, Workflow, Brain, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 type ServiceItem = {
@@ -17,9 +17,9 @@ type ServicesProps = {
 };
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
-  crm: Database,
+  crm: Code2,
   etl: Workflow,
-  audit: FileBarChart,
+  audit: Brain,
 };
 
 export default function Services({ t }: ServicesProps) {
@@ -48,7 +48,7 @@ export default function Services({ t }: ServicesProps) {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {t.list.map((service, i) => {
-          const IconComponent = iconMap[service.id] || Database;
+          const IconComponent = iconMap[service.id] || Code2;
           
           return (
             <motion.div

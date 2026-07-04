@@ -1,19 +1,27 @@
 import { motion } from 'framer-motion';
-import { 
-  SiReact, 
-  SiTypescript, 
-  SiPython, 
-  SiTailwindcss, 
-  SiVite, 
-  SiGit, 
-  SiFramer, 
-  SiVercel 
+import {
+  SiReact,
+  SiTypescript,
+  SiPython,
+  SiTailwindcss,
+  SiVite,
+  SiGit,
+  SiFramer,
+  SiVercel,
+  SiNextdotjs,
+  SiNodedotjs,
+  SiSupabase,
+  SiPostgresql
 } from '@icons-pack/react-simple-icons';
 
 const technologies = [
-  { name: "React", Icon: SiReact, hoverColorClass: "group-hover:text-[#61DAFB]" },
-  { name: "TypeScript", Icon: SiTypescript, hoverColorClass: "group-hover:text-[#3178C6]" },
   { name: "Python", Icon: SiPython, hoverColorClass: "group-hover:text-[#3776AB]" },
+  { name: "TypeScript", Icon: SiTypescript, hoverColorClass: "group-hover:text-[#3178C6]" },
+  { name: "React", Icon: SiReact, hoverColorClass: "group-hover:text-[#61DAFB]" },
+  { name: "Next.js", Icon: SiNextdotjs, hoverColorClass: "group-hover:text-[#FFFFFF]" },
+  { name: "Node.js", Icon: SiNodedotjs, hoverColorClass: "group-hover:text-[#5FA04E]" },
+  { name: "PostgreSQL", Icon: SiPostgresql, hoverColorClass: "group-hover:text-[#4169E1]" },
+  { name: "Supabase", Icon: SiSupabase, hoverColorClass: "group-hover:text-[#3FCF8E]" },
   { name: "Tailwind CSS", Icon: SiTailwindcss, hoverColorClass: "group-hover:text-[#06B6D4]" },
   { name: "Vite", Icon: SiVite, hoverColorClass: "group-hover:text-[#646CFF]" },
   { name: "Git", Icon: SiGit, hoverColorClass: "group-hover:text-[#F05032]" },

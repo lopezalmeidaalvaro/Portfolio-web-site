@@ -6,24 +6,24 @@ export const translations = {
       githubText: "GitHub",
     },
     hero: {
-      headline: "Your business data is lying to you. I fix that.",
-      tagline: "ETL Pipelines · CRM Data Cleaning · Data Validation · Remote",
-      bio: "Growing startups lose revenue and operational speed due to messy CRMs and inaccurate dashboards. I design and implement automated data systems that eliminate manual overhead and ensure 100% reliable metrics. As proof: I scientifically demonstrated (r=0.268) that hotel demand is inelastic to Calima weather anomalies, saving thousands of euros in room margins.",
-      credibilityBar: "Verified metrics · Response < 24h · Available for projects across Europe",
+      headline: "I build systems that think. From quantum compilers to data pipelines.",
+      tagline: "Quantum Computing · Full-Stack Engineering · Data Pipelines · AI Products · Remote",
+      bio: "I engineer production systems at the intersection of applied science and software — from a calibration-aware quantum compiler that beats Qiskit on real IBM hardware, to ETL pipelines that proved hotel demand is inelastic to weather (r=0.268). I ship fast, test rigorously, and document everything.",
+      credibilityBar: "Verified on IBM Quantum hardware · Response < 24h · Available for projects across Europe",
       ctaPrimary: "See my work",
       ctaSecondary: "Let's talk",
       differentiators: [
         {
-          label: "ROI-Focused",
-          detail: "I don't just write code; I stop data leaks in sales and operations."
+          label: "Science-Driven",
+          detail: "Every claim backed by data — benchmarks, correlations, public Job IDs."
         },
         {
-          label: "Zero Overhead",
-          detail: "I work independently, integrating with your stack without hand-holding."
+          label: "Full-Stack Depth",
+          detail: "From quantum circuits to React frontends, I own the entire stack."
         },
         {
           label: "Speed to Value",
-          detail: "Most cleanups and integrations are delivered, tested, and live in under 72h."
+          detail: "Most projects are delivered, tested, and live in under 72h."
         }
       ] as const
     },
@@ -35,28 +35,36 @@ export const translations = {
       ] as const
     },
     services: {
-      title: "How I help your business",
-      subtitle: "Concrete data solutions to put your operations on autopilot.",
-      ctaText: "Tell me about your project",
+      title: "What I build",
+      subtitle: "End-to-end systems that ship fast, work reliably, and survive production.",
+      ctaText: "Let's discuss your project",
       list: [
         {
           id: "crm",
-          title: "CRM & Lead Data Cleaning",
-          description: "Your CRM is filled with duplicates, incorrect emails, and empty fields. I deliver it clean, validated, and ready to import in 48-72h."
+          title: "Full-Stack Applications",
+          description: "Production web apps from zero to deploy — React/Next.js frontends, Node.js APIs, PostgreSQL/Supabase backends, CI/CD, and monitoring."
         },
         {
           id: "etl",
-          title: "ETL Pipeline & Data Automation",
-          description: "I build automated processes that clean and move your data between systems seamlessly, without any manual intervention."
+          title: "Data Pipelines & Automation",
+          description: "ETL systems, data validation, API integrations, and automated workflows that eliminate manual work and ensure reliable metrics."
         },
         {
           id: "audit",
-          title: "Data Audit & Quality Report",
-          description: "I analyze your current data quality and deliver an actionable report on errors found and how they affect your business decisions."
+          title: "Applied Research & AI Products",
+          description: "From ML pipelines to AI-powered products — I turn research prototypes into deployed applications with rigorous testing and documentation."
         }
       ] as const
     },
     projects: {
+      qade: {
+        title: "QADE — Quantum Algorithm Discovery Engine",
+        description: "Standard quantum compilers ignore real hardware physics. QADE compiles against live QPU calibration data — T1/T2 coherence, readout and CNOT error rates per qubit — and beats Qiskit Level 3 in Hellinger fidelity on real 156-qubit IBM processors.\n60% win rate across 10 documented runs with publicly auditable IBM Quantum Job IDs. Gate Guard ensures output is never worse than baseline.\n(Tech: Python, Qiskit, PyZX, Next.js, Supabase, Vercel)",
+        tags: ["Quantum Computing", "Python", "Qiskit", "PyZX", "Next.js", "Supabase"],
+        action: "Visit QADE",
+        problem: "Quantum Compilation · IBM Quantum Hardware",
+        url: "https://qade-landing.vercel.app"
+      },
       weather: {
         title: "DataDriven Weather Demand",
         description: "Hotels lose thousands of euros by slashing room rates out of panic over weather cancellations.\nI analyzed historical bookings against real weather alerts and proved (r=0.268) that demand is inelastic. Dropping prices during Calima does not attract guests and only erodes profit margins; keep rates stable.\n(Tech: Python, pandas, data validation, public APIs, automated workflows)",
@@ -100,24 +108,24 @@ export const translations = {
       githubText: "GitHub",
     },
     hero: {
-      headline: "Tus datos de negocio te están mintiendo. Yo lo soluciono.",
-      tagline: "Pipelines ETL · Limpieza de Datos CRM · Validación de Datos · Remoto",
-      bio: "Las startups en crecimiento pierden dinero y tiempo por culpa de CRMs desordenados y reportes con errores. Yo diseño e implemento sistemas de datos automatizados que eliminan las tareas manuales y garantizan métricas 100% fiables. Como prueba: demostré con datos meteorológicos reales que la demanda hotelera es inelástica a la Calima (r=0.268), salvando miles de euros en márgenes de tarifas.",
-      credibilityBar: "Métricas verificadas · Respuesta < 24h · Disponible para proyectos en Europa",
+      headline: "Construyo sistemas que piensan. De compiladores cuánticos a pipelines de datos.",
+      tagline: "Computación Cuántica · Full-Stack · Pipelines de Datos · Productos con IA · Remoto",
+      bio: "Diseño sistemas en producción en la intersección de ciencia aplicada y software — desde un compilador cuántico que supera a Qiskit en hardware real de IBM, hasta pipelines ETL que demostraron que la demanda hotelera es inelástica al clima (r=0.268). Entrego rápido, testeo con rigor y documento todo.",
+      credibilityBar: "Verificado en hardware IBM Quantum · Respuesta < 24h · Disponible para proyectos en Europa",
       ctaPrimary: "Ver mi trabajo",
       ctaSecondary: "Hablemos",
       differentiators: [
         {
-          label: "Enfoque en ROI",
-          detail: "No solo escribo código; soluciono fugas de información en tus ventas y operaciones."
+          label: "Ciencia aplicada",
+          detail: "Cada afirmación respaldada por datos — benchmarks, correlaciones, Job IDs públicos."
         },
         {
-          label: "Sin supervisión",
-          detail: "Trabajo de forma independiente, integrándome en tu stack sin quitarte tiempo."
+          label: "Full-Stack completo",
+          detail: "De circuitos cuánticos a frontends en React, domino todo el stack."
         },
         {
           label: "Valor en días",
-          detail: "La mayoría de integraciones y limpiezas de datos están listas y en producción en 48-72h."
+          detail: "La mayoría de proyectos están entregados, testeados y en producción en 48-72h."
         }
       ] as const
     },
@@ -129,28 +137,36 @@ export const translations = {
       ] as const
     },
     services: {
-      title: "Cómo puedo ayudarte",
-      subtitle: "Soluciones de datos concretas para que tu negocio funcione en piloto automático.",
-      ctaText: "Háblame de tu proyecto",
+      title: "Lo que construyo",
+      subtitle: "Sistemas end-to-end que se entregan rápido, funcionan de verdad y aguantan producción.",
+      ctaText: "Hablemos de tu proyecto",
       list: [
         {
           id: "crm",
-          title: "CRM & Lead Data Cleaning",
-          description: "Tu CRM tiene duplicados, emails incorrectos y campos vacíos. Te lo entrego limpio, validado y listo para importar en 48-72h."
+          title: "Aplicaciones Full-Stack",
+          description: "Apps web en producción de cero a deploy — frontends React/Next.js, APIs Node.js, backends PostgreSQL/Supabase, CI/CD y monitorización."
         },
         {
           id: "etl",
-          title: "ETL Pipeline & Data Automation",
-          description: "Construyo el proceso que limpia y mueve tus datos automáticamente entre sistemas, sin intervención manual."
+          title: "Pipelines de Datos y Automatización",
+          description: "Sistemas ETL, validación de datos, integraciones de APIs y workflows automatizados que eliminan trabajo manual y garantizan métricas fiables."
         },
         {
           id: "audit",
-          title: "Data Audit & Quality Report",
-          description: "Analizo tus datos actuales y te entrego un informe con los errores encontrados y cómo afectan a tus decisiones de negocio."
+          title: "Investigación Aplicada y Productos con IA",
+          description: "De pipelines de ML a productos con IA — convierto prototipos de investigación en aplicaciones desplegadas con testing riguroso y documentación."
         }
       ] as const
     },
     projects: {
+      qade: {
+        title: "QADE — Quantum Algorithm Discovery Engine",
+        description: "Los compiladores cuánticos estándar ignoran la física real del hardware. QADE compila contra datos de calibración en tiempo real — coherencia T1/T2, errores de lectura y CNOT por qubit — y supera a Qiskit Level 3 en fidelidad Hellinger en procesadores IBM reales de 156 qubits.\n60% de victorias en 10 ejecuciones documentadas con Job IDs auditables de IBM Quantum. Gate Guard garantiza que el resultado nunca sea peor que el baseline.\n(Tecnologías: Python, Qiskit, PyZX, Next.js, Supabase, Vercel)",
+        tags: ["Computación Cuántica", "Python", "Qiskit", "PyZX", "Next.js", "Supabase"],
+        action: "Visitar QADE",
+        problem: "Compilación Cuántica · Hardware IBM Quantum",
+        url: "https://qade-landing.vercel.app"
+      },
       weather: {
         title: "DataDriven Weather Demand",
         description: "Los hoteles pierden miles de euros al bajar precios por pánico a cancelaciones climáticas.\nAnalicé reservas históricas contra alertas del clima real y demostré (r=0.268) que la demanda es inelástica. Bajar precios en Calima no atrae clientes y destruye el margen neto; mantén tarifas estables.\n(Tecnologías: Python, pandas, validación de datos, APIs, automatización)",

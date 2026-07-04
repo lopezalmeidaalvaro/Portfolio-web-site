@@ -15,6 +15,7 @@ type ProjectData = {
 
 type ProjectsProps = {
   t: {
+    qade: ProjectData;
     weather: ProjectData;
     germalearn: ProjectData;
     neurosymbolic: ProjectData;
@@ -53,13 +54,50 @@ export default function Projects({ t, onViewCaseStudy, view = 'main', lang = 'en
     return (
       <section id="projects" className="py-20 scroll-mt-24">
         <div className="max-w-4xl mx-auto">
-          {/* Weather Demand - Featured Centered Item */}
+          {/* QADE - Primary Featured Project */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
             className="group relative rounded-3xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 p-8 md:p-10 hover:bg-gray-50/80 dark:hover:bg-gray-800/80 transition-colors flex flex-col justify-between overflow-hidden"
+          >
+            <div className="absolute top-0 right-0 p-8 opacity-0 group-hover:opacity-100 transition-opacity">
+              <ArrowUpRight className="w-6 h-6 text-gray-400" />
+            </div>
+            <div className="mb-8">
+              <p className="text-xs text-gray-400 dark:text-gray-600 uppercase tracking-widest font-medium mb-4">{t.qade.problem}</p>
+              <div className="flex flex-wrap items-center gap-2 mb-6">
+                {t.qade.tags.map((tag, i) => (
+                  <span key={i} className="px-3 py-1 bg-gray-50 dark:bg-gray-950 rounded-full text-xs font-semibold text-gray-600 dark:text-gray-300 border border-gray-200 dark:border-gray-800">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              <h3 className="text-3xl md:text-4xl font-bold text-gray-950 dark:text-white mb-4 tracking-tight">{t.qade.title}</h3>
+              {renderDescription(t.qade.description, true)}
+            </div>
+
+            <div className="flex flex-wrap items-center gap-4">
+              <a
+                href={t.qade.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gray-950 dark:bg-white text-white dark:text-gray-950 font-semibold text-sm hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors"
+              >
+                <ExternalLink className="w-4 h-4" />
+                {t.qade.action}
+              </a>
+            </div>
+          </motion.div>
+
+          {/* Weather Demand - Secondary Featured */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.15 }}
+            className="group relative rounded-3xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 p-8 md:p-10 hover:bg-gray-50/80 dark:hover:bg-gray-800/80 transition-colors flex flex-col justify-between overflow-hidden mt-6"
           >
             <div className="absolute top-0 right-0 p-8 opacity-0 group-hover:opacity-100 transition-opacity">
               <ArrowUpRight className="w-6 h-6 text-gray-400" />
@@ -73,10 +111,10 @@ export default function Projects({ t, onViewCaseStudy, view = 'main', lang = 'en
                   </span>
                 ))}
               </div>
-              <h3 className="text-3xl md:text-4xl font-bold text-gray-950 dark:text-white mb-4 tracking-tight">{t.weather.title}</h3>
-              {renderDescription(t.weather.description, true)}
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-950 dark:text-white mb-4 tracking-tight">{t.weather.title}</h3>
+              {renderDescription(t.weather.description, false)}
             </div>
-            
+
             <div className="flex flex-wrap items-center gap-4">
               <a
                 href="https://github.com/lopezalmeidaalvaro/datadriven-weather-demand"
@@ -104,7 +142,7 @@ export default function Projects({ t, onViewCaseStudy, view = 'main', lang = 'en
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
             className="mt-12 flex justify-center"
           >
             <Link
@@ -112,8 +150,8 @@ export default function Projects({ t, onViewCaseStudy, view = 'main', lang = 'en
               onClick={() => window.scrollTo({ top: 0 })}
               className="group inline-flex items-center gap-2 px-6 py-3.5 rounded-full border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900/50 text-gray-600 dark:text-gray-300 font-semibold text-sm hover:border-gray-400 dark:hover:border-gray-700 hover:text-gray-950 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800 transition-all shadow-md hover:shadow-indigo-500/5"
             >
-              {lang === 'es' 
-                ? "Ver proyectos de investigación & side projects →" 
+              {lang === 'es'
+                ? "Ver proyectos de investigación & side projects →"
                 : "See research & side projects →"}
             </Link>
           </motion.div>
